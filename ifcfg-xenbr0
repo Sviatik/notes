@@ -1,0 +1,6 @@
+DEVICE=xenbr0
+BOOTPROTO=dhcp
+NM_CONTROLLED=no
+ONBOOT=yes
+TYPE=Bridge
+USERCTL=no

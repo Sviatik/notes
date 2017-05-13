@@ -1,0 +1,32 @@
+### git:
+
+The repository for this project is empty
+
+If you already have files you can push them using command line instructions below.
+
+Otherwise you can start with adding a README, a LICENSE, or a .gitignore to this project.
+
+You will need to be owner or have the master permission level for the initial push, as the master branch is automatically protected.
+# Command line instructions
+      Git global setup
+
+      git config --global user.name "Sviatoslav Stetsiak"
+      git config --global user.email 
+
+Create a new repository
+
+git clone http://
+cd ansible_tutor
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder or Git repository
+
+cd existing_folder
+git init
+git remote add origin http://192.
+git add .
+git commit
+git push -u origin master
