@@ -1,1 +1,1 @@
-# diary
+# notes about everything
