@@ -35,6 +35,8 @@
 	$env | grep username
 	username=uusser
 
+	cat $logfile | sort -M -k 2			    # Sort по даті
+
 	LANG=C df -h                                        # Змінює локалізацію на період виконання команди df
 
 	name=sviat
