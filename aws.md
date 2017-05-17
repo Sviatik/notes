@@ -7,3 +7,35 @@ mount efs to ec2 instance
 Instance metadata it\`s k/v storage:
     
     curl http://169.254.169.254/latest/meta-data
+
+
+
+### Json output
+
+    aws ec2 describe-security-groups --group-names MySecurityGroup
+
+    {
+    "SecurityGroups": [
+        {
+            "IpPermissionsEgress": [],
+            "Description": "My security group",
+            "IpPermissions": [
+                {
+                    "PrefixListIds": [],
+                    "FromPort": 22,
+                    "IpRanges": [
+                        {
+                            "CidrIp": "203.0.113.0/24"
+                        }
+                    ],
+                    "ToPort": 22,
+                    "IpProtocol": "tcp",
+                    "UserIdGroupPairs": []
+                }
+            ],
+            "GroupName": "MySecurityGroup",
+            "OwnerId": "123456789012",
+            "GroupId": "sg-903004f8",
+        }
+    ]
+}
