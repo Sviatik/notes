@@ -43,7 +43,7 @@ class HTTPCheck(AgentCheck):
 
         timing = end_time - start_time
 
-        self.gauge('app.health.check', result, tags=['app-health-check'])
+        self.gauge('app.health.check', result, tags=['app.health.check'])
 
     def timeout_event(self, url, timeout, aggregation_key):
         self.event({
