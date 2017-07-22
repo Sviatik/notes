@@ -1,0 +1,104 @@
+/subscriptions/Visual Studio Enterprise/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachineScaleSets
+
+{
+  "value": [
+    {
+      "sku": {
+        "name": "Standard_A1",
+        "tier": "Standard",
+        "capacity": 1
+      },
+      "properties": {
+        "singlePlacementGroup": true,
+        "upgradePolicy": {
+          "mode": "Manual"
+        },
+        "virtualMachineProfile": {
+          "osProfile": {
+            "computerNamePrefix": "testvmssl",
+            "adminUsername": "sviat",
+            "linuxConfiguration": {
+              "disablePasswordAuthentication": false
+            },
+            "secrets": []
+          },
+          "storageProfile": {
+            "osDisk": {
+              "createOption": "FromImage",
+              "caching": "ReadWrite",
+              "managedDisk": {
+                "storageAccountType": "Standard_LRS"
+              }
+            },
+            "imageReference": {
+              "publisher": "Canonical",
+              "offer": "UbuntuServer",
+              "sku": "16.04-LTS",
+              "version": "latest"
+            }
+          },
+          "networkProfile": {
+            "networkInterfaceConfigurations": [
+              {
+                "name": "testvmsslnic",
+                "properties": {
+                  "primary": true,
+                  "enableAcceleratedNetworking": false,
+                  "dnsSettings": {
+                    "dnsServers": []
+                  },
+                  "ipConfigurations": [
+                    {
+                      "name": "testvmsslipconfig",
+                      "properties": {
+                        "subnet": {
+                          "id": "/subscriptions/09b75113-70ca-41e9-8409-5e7e0a971c1c/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/testvmsslvnet/subnets/testvmsslsubnet"
+                        },
+                        "privateIPAddressVersion": "IPv4",
+                        "loadBalancerBackendAddressPools": [
+                          {
+                            "id": "/subscriptions/09b75113-70ca-41e9-8409-5e7e0a971c1c/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/testvmssllb/backendAddressPools/testvmsslbepool"
+                          }
+                        ],
+                        "loadBalancerInboundNatPools": [
+                          {
+                            "id": "/subscriptions/09b75113-70ca-41e9-8409-5e7e0a971c1c/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/testvmssllb/inboundNatPools/testvmsslnatpool"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "extensionProfile": {
+            "extensions": [
+              {
+                "properties": {
+                  "publisher": "Microsoft.Azure.Extensions",
+                  "type": "CustomScript",
+                  "typeHandlerVersion": "2.0",
+                  "autoUpgradeMinorVersion": false,
+                  "settings": {
+                    "fileUris": [
+                      "https://raw.githubusercontent.com/Sviatik/conf/master/test.sh"
+                    ]
+                  }
+                },
+                "name": "lapextension"
+              }
+            ]
+          }
+        },
+        "provisioningState": "Succeeded",
+        "overprovision": true,
+        "uniqueId": "4f1c5da8-5206-49e3-acee-85903bd45ff1"
+      },
+      "type": "Microsoft.Compute/virtualMachineScaleSets",
+      "location": "westeurope",
+      "id": "/subscriptions/09b75113-70ca-41e9-8409-5e7e0a971c1c/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachineScaleSets/testvmssl",
+      "name": "testvmssl"
+    }
+  ]
+}
