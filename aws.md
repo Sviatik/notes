@@ -39,3 +39,13 @@ Instance metadata it\`s k/v storage:
         }
     ]
 }
+
+
+
+# Step to create new env
+- Add new VPC
+- Add subnet per availability zone
+- Add new GW
+- In Route Table add default getaway (0.0.0.0/0) to new GW
+- Add or create new SSH key.
+- Add SG
