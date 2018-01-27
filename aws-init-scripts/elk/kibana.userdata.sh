@@ -9,10 +9,9 @@ setenforce 0
 sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux
 
 yum upgrade
-
-yum install epel-release
-
-yum install wget curl vim telnet bash-completion
+echo "INFO: START INSTAL PACKAGES"
+yum install -y epel-release
+yum install -y wget curl vim telnet bash-completion
 
 sudo rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
 
