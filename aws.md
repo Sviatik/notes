@@ -44,6 +44,7 @@ Instance metadata it\`s k/v storage:
 
 # Step to create new env
 - Add new VPC
+- Edit DNS hostnames in VPS
 - Add subnet per availability zone
 - Add new GW
 - In Route Table add default getaway (0.0.0.0/0) to new GW
