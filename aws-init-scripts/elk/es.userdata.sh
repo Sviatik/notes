@@ -36,6 +36,10 @@ enabled=1
 
 yum install -y elasticsearch
 
+systemctl start elasticsearch
+systemctl enable elasticsearch
+
+
 echo "############################################"
 echo "############END BOOTSTRAP SCRIPT############"
 echo "############################################"

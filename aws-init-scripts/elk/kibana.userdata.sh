@@ -29,7 +29,8 @@ enabled=1
 sudo yum -y install kibana
 
 
-
+systemctl start kibana
+systemctl enable kibana
 
 
 
