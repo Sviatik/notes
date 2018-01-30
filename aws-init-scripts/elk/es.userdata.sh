@@ -14,7 +14,7 @@ sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux
 yum upgrade
 echo "INFO: START INSTAL PACKAGES"
 yum install -y epel-release
-yum install -y wget curl vim telnet bash-completion
+yum install -y wget curl vim telnet bash-completion tmux
 
 echo "INFO: START INSTAL JAVA"
 cd /tmp
