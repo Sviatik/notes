@@ -6,7 +6,7 @@ echo "###########START BOOTSTRAP SCRIPT###########"
 echo "############################################"
 
 #create user and add pub keys
-useradd -m sviatik -g admin
+useradd -m sviatik -g adm
 mkdir /home/sviatik/.ssh
 curl https://github.com/sviatik.keys >> /home/sviatik/.ssh/authorized_keys 
 
