@@ -1,5 +1,11 @@
 # Powershell
 
+## CLI Works
+ 	Get-ChildItem -Path .\ -Recurse -File -Name | Select-String -Pattern sql	# find all files according to pattern
+	Test-NetConnection localhost -Port 80										# check port
+
+
+
 ## Strings
 
 	Get-Command -? 			# == Get-Help Get-Command
